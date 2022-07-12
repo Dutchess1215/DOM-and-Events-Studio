@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
     // put DOM here?
     console.log('window loaded');
 
-
+//mission control start
 takeoff.addEventListener('click', function(event){
    let launchConfirm =  window.confirm('Confirm that the shuttle is ready for takeoff.');
     if(launchConfirm === true){
@@ -24,10 +24,22 @@ takeoff.addEventListener('click', function(event){
         spaceShuttleHeight.innerHTML=10000;
     }
 });
-landing.addEventListener(click, function(event){
+landing.addEventListener('click', function(event){
     window.alert('The shuttle is landing. Landing gear engaged.');
     flightStatus.innerHTML = 'The shuttle has landed';
     shuttleBackground.style.backgroundColor = 'green';
     spaceShuttleHeight.innerHTML= 0 ;
 });
+missionAbort.addEventListener('click', function(event){
+    let launchConfirm =  window.confirm('Confirm that you want to abort the mission.');
+     if(launchConfirm === true){
+         flightStatus.innerHTML = 'Mission Aborted.';
+         shuttleBackground.style.backgroundColor = 'green';
+         spaceShuttleHeight.innerHTML= 0 ;
+     }
+ });
+ //mission control end
+ //flight control start
+
+ 
 });
